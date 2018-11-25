@@ -30,8 +30,6 @@ class Solution:
             self.result += cache.get(and_now - sum, 0)
             cache.setdefault(and_now, 0)
             
-            print (and_now, and_now - sum, self.result)
-            
             cache[and_now] += 1
             self.pathSumAct(root.left, and_now, sum, cache)
             self.pathSumAct(root.right, and_now, sum, cache)
