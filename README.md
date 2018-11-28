@@ -18,6 +18,7 @@ Record my leet code solution
 * [287. Find the Duplicate Number (Medium)](https://leetcode.com/problems/find-the-duplicate-number/description/)
 * [769. Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted/description/)
 * [697. Degree of an Array](https://leetcode.com/problems/degree-of-an-array/description/)
+* [406. Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/description/)
 
 ## Too much thumb-down
 
