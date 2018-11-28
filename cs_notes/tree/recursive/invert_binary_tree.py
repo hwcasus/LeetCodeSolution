@@ -38,3 +38,12 @@ class Solution:
             self.invertTree(root.right)
             self.invertTree(root.left)
             return root
+
+    def invertTreeRecursive2(self, root):
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        if root:
+            root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
+        return root

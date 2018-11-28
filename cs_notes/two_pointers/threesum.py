@@ -9,7 +9,6 @@ class Solution:
         """
         
         list.sort(nums)
-        print (nums)
         result = []
         for i, first in enumerate(nums[:-1]):
             # this line prevent we use same FIRST
