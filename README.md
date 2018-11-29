@@ -1,6 +1,16 @@
 # LeetCodeSolution
 Record my leet code solution
 
+## Target
+
+* Tree
+* Linked List
+* Array
+* Stack
+* Queue
+* Sort
+* Search
+
 ## To Do
 
 * Leetcode top 100 liked
@@ -10,6 +20,7 @@ Record my leet code solution
 ## Cool Idea
 
 * [680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/description/)
+* [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/)
 
 ## So hard
 
@@ -19,6 +30,8 @@ Record my leet code solution
 * [769. Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted/description/)
 * [697. Degree of an Array](https://leetcode.com/problems/degree-of-an-array/description/)
 * [406. Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/description/)
+* [665. Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/description/)
+* [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)
 
 ## Too much thumb-down
 
