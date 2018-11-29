@@ -23,6 +23,22 @@ class Solution:
         :rtype: List[int]
         """
         
+        d = {}
+        for i, n in enumerate(nums):
+            l = target - n
+            # 如果字典中沒有正在找的餘數這個 key, 那就把自己跟idx 寫入字典
+            # 因為題目保證有一對, 所以一定有另外一個數字會需要找到自己跟自己的idx
+            if l in d: return [d[l], i]
+            else:d[n] = i
+
+
+    def twoSumOld(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
         search_mode = False
         ans = []
         res = 0
