@@ -32,6 +32,7 @@ Record my leet code solution
 * [406. Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/description/)
 * [665. Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/description/)
 * [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)
+* [581. Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/)
 
 ## Too much thumb-down
 
