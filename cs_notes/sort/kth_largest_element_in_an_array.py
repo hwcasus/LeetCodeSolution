@@ -23,12 +23,13 @@ class Solution:
         return heap[0]
 
     def findKthLargestQuickSort(self, nums, k):
-            """
+        """
         :type nums: List[int]
         :type k: int
         :rtype: int
         """
         def quicksort(i, j):
+            import random
             rand_index = random.randint(i, j)
             nums[rand_index], nums[j] = nums[j], nums[rand_index]
             pivot_index, pivot_val = i, nums[j]
