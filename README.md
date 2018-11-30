@@ -1,6 +1,10 @@
 # LeetCodeSolution
 Record my leet code solution
 
+## 心法
+
+* **Recursive** 及 **DP** 都是將問題拆成子問題解決，差別在於 **DP** 可以藉由保存子問題的答案來減少重複運算
+
 ## Target
 
 * Tree
@@ -9,7 +13,9 @@ Record my leet code solution
 * Stack
 * Queue
 * Sort
+  * QuickSort, QuickSelect
 * Search
+  * Binary Seach
 
 ## To Do
 
