@@ -27,6 +27,11 @@ Record my leet code solution
 
 * [680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/description/)
 * [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/)
+* [79. Word Search](https://leetcode.com/problems/word-search/description/)
+* [744. Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/)
+* [279. Perfect Squares](https://leetcode.com/problems/perfect-squares/description/)
+* [417. Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/description/)
+* [130. Surrounded Regions](https://leetcode.com/problems/surrounded-regions/description/)
 
 ## So hard
 
@@ -39,6 +44,7 @@ Record my leet code solution
 * [665. Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/description/)
 * [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)
 * [581. Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description/)
+* [Search for a Range](https://leetcode.com/explore/learn/card/binary-search/135/template-iii/944/)
 
 ## Too much thumb-down
 
