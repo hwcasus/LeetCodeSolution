@@ -21,7 +21,7 @@ class Solution:
                 d[a]-=1
         # print(d)
 
-        return all(v == 0for v in d.values())
+        return all(v == 0 for v in d.values())
 
     def canReorderDoubledFailedV2(self, A):
         """
@@ -43,7 +43,7 @@ class Solution:
                     d[a*2]-=1
                     d[a]-=1
 
-        return all(v == 0for v in d.values())
+        return all(v == 0 for v in d.values())
 
     def canReorderDoubledFailedV1(self, A):
         """
