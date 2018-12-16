@@ -233,7 +233,7 @@
         當然最後還是要加上當前格子的值 nums[i][j]
     最後當所有的 row 都走完了, dp[-1] 就是最左下的最小路徑總和的走法
     ```
-####[303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/description/) (Dynamic Programming)
+#### [303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/description/) (Dynamic Programming)
 * 題目: 給定一長度為 n 之數組, 請設計一個函數可以回傳兩 index 間的數值總和
 * Example 1:
     ```
