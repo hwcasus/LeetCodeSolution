@@ -506,6 +506,75 @@
     可以發現 n//2 和 n 除了最後一個 bit 以外都是一樣的
     所以 dp[n] = dp[n//2] + n&1 就可以了
     ```
+#### [646. Maximum Length of Pair Chain](https://leetcode.com/problems/maximum-length-of-pair-chain/description/) (Dynamic Programming)
+* 題目: 給 n 組數對, 若兩數對中, 一者的第二個數小於另一的第一個數, 則可成為 chain, 試問最長的 chain 長度多少
+* Example 1:
+    ```
+    Input: [[1,2], [2,3], [3,4]]
+    Output: 2
+    Explanation: The longest chain is [1,2] -> [3,4]
+    ```
+* 解法簡述:
+    ```
+    本題首先要排序, 用 pairs[1] 排序
+    此外, 先想到用 dp 從後往前解
+    dp[i] 代表以元素 i 為起點的最長 chain 之長度
+    更新方式也很直覺, i 之後的任一者 j, 只要 j[0] > i[1], 就表示 i 可以接在 j 前面形成一個 chain
+    故 dp[i] = max(dp[j] for all j if j[0] > i[1])
+    後來發現可以使用 greedy 的方式解, 一樣先排序
+    接著用 stack 或是 end 紀錄
+    如果是 stack 就檢查新元素的頭有沒有比 stack 最上面的值的尾巴還大, 有就加進去
+    如果是 end 就檢查新元素的頭有沒有比 end 還大, 有的話就更新 end 為新元素的 end, counter +1
+    最後回傳 len(stack) or counter 就好
+    ```
+
+#### [376. Wiggle Subsequence](https://leetcode.com/problems/wiggle-subsequence/description/) (Dynamic Programming, Greedy)
+* 題目: 給一數列, 請找出最長的連續上下震盪數列 (請看範例)
+* Example 1:
+    ```
+    Input: [1,7,4,9,2,5]
+    Output: 6
+    Explanation: The entire sequence is a wiggle sequence.
+    ```
+* Example 2:
+    ```
+    Input: [1,17,5,10,13,15,10,5,16,8]
+    Output: 7
+    Explanation: There are several subsequences that achieve this length. One is [1,17,10,13,10,16,8].
+    ```
+* Example 2:
+    ```
+    Input: [1,2,3,4,5,6,7,8,9]
+    Output: 2
+    ```
+* 解法簡述:
+    ```
+    這題解法有四個階段
+    1) 暴力解
+    2) O(n**2) / O(n) DP
+    3) O(n) / O(n) DP
+    4) O(n) / O(1) Greedy DP
+    比較重要的是第二種方法
+    這邊要用兩個一維 DP 陣列, 下稱 up, down
+    up[i]紀錄的是到 i 元素為止最長的震盪數列長度, 且元素 i 必須是上升的
+    down[i]紀錄的是到 i 元素為止最長的震盪數列長度, 且元素 i 必須是下降的
+    而兩者更新方式類似, 
+    在 nums[i] > nums[j] 的前提下才可以更新up[i], 
+    更新時要去檢查之前所有的 down[j] for j = 0~i 
+    然後找出最大的, 也就是 up[i] = max(down[j] for j in [0..j] if nums[i]>nums[j])
+    而 donw[i] 則是  = max(up[j] for j in [0..j] if nums[i]<nums[j])
+    最後就回傳 max(down[-1], up[-1]) + 1, 因為這邊只記錄了上下震盪的次數而已, 長度要 + 1
+    而後續的改善中, 階段3 是根據這個想法 - 如果比較 nums[i-1] 跟 nums[i], 只會有三種可能
+        a) nums[i-1] > nums[i], 這表示 nums[i] 是上升, nums[i-1]處於下降
+            所以 up[i] = down[i-1]+1 而 down[i] = down[i-1]
+        b) nums[i-1] < nums[i], 這表示 nums[i] 是下降, nums[i-1]處於上升
+            所以 down[i] = up[i-1]+1 而 up[i] = up[i-1]
+        c) nums[i-1] == nums[i], 這表示不上升也不下降
+            所以 up[i] = up[i-1] 而 down[i] = down[i-1]
+    所以每次更新只需要看前一個, 不需要去往回看全部的
+    階段 4 則是因為每次更新只需要看前一個, 所以可以將 up 和 down 當成變數就好    
+    ```
+
 #### 
 * 題目:
 * Example 1:
