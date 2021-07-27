@@ -6,6 +6,34 @@ class Solution:
     # 給 2 等長 list, A & B, 將A重新排序,
     # 盡可能地使 A 的每個元素都大於 B 在同一位子上的元素
     # 要注意 B 的順序不能打亂
+
+    def advantageCount(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        # Revisit @ 20210726
+        num_elements = len(nums1)
+        nums1 = sorted(nums1, reverse=True)
+        nums2_sorted_idx = sorted(
+            [
+                i for i in range(num_elements)
+            ],
+            key=lambda x:nums2[x],
+            reverse=True
+        )
+
+        output = [None] * num_elements
+        left, right = 0, num_elements - 1
+
+        for idx in nums2_sorted_idx:
+            # if current largest from nums1 > current largest from nums2
+            if nums1[left] > nums2[idx]:
+                output[idx] = nums1[left]
+                left += 1
+            else:
+                output[idx] = nums1[right]
+                right -= 1
+
+        return output
+
+
     def advantageCount(self, A, B):
         """
         :type A: List[int]
@@ -54,7 +82,3 @@ class Solution:
                         break
 
         return ret
-
-
-
-

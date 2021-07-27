@@ -2,6 +2,17 @@
 # https://leetcode.com/problems/array-of-doubled-pairs/description/
 
 class Solution:
+    def canReorderDoubled_re(self, arr: List[int]) -> bool:
+        # revisit 2021/07/26
+        counter = Counter(arr)
+
+        for num in sorted(arr, key=lambda x: abs(x)):
+            if counter[num] > 0 and counter[num*2] > 0:
+                counter[num] -= 1
+                counter[num * 2] -= 1
+
+        return not any(counter.values())
+
     def canReorderDoubled(self, A):
         """
         :type A: List[int]
